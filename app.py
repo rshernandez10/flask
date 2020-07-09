@@ -3,6 +3,9 @@ from http import HTTPStatus
 
 # Create an instance of Flask class
 app = Flask(__name__)
+#app.config['Debug]=False
+app.config.from_envvar('APP_SETTINGS')
+
 
 # Define recipes list
 recipes = [
